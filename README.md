@@ -16,3 +16,7 @@
 
 5. Зайти в keycloak http://localhost:8080/, создать realm 'OTUS', в его настройках найти security-defenses и выставить в поле Content-Security-Policy следующее содердимое: 
 frame-src http:; frame-ancestors http://localhost:3001; object-src http:;
+6. Создать в Realm OTUS нового клиента webapp, выставить у него следующие параметры:
+![image](https://github.com/Rpry/OTUS_api_keycloak/assets/13750284/e2dc362b-0311-4797-ab5b-e8dc935d5fbd)
+
+
