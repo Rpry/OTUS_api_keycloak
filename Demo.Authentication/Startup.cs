@@ -1,5 +1,4 @@
 using Demo.Authentication.Authorization;
-using Demo.Authentication.Data;
 using Demo.Authentication.Middleware;
 using Keycloak.AuthServices.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -24,7 +23,6 @@ namespace Demo.Authentication
             services.AddKeycloakWebApiAuthentication(Configuration);
             services.AddTransient<IAuthorizationHandler, AgeAuthorizationHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddSingleton<Database>();
             
             // Add Cors
             services.AddCors(o => o.AddPolicy("Cors", builder =>
