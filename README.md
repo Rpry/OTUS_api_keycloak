@@ -1,10 +1,11 @@
-Окружение для этого проекта запускает компоуз application.yml из папки Depoly
+![image](https://github.com/user-attachments/assets/23936afc-53ec-4e89-87ae-d96f2113d809)Окружение для этого проекта запускает компоуз application.yml из папки Depoly
 
 Для работы с приложением нужно:
 1. Убедиться, что у вас установлена БД постгрес, если нет - раскоментитровать в application.yml блок постгреса и его волюм ниже
-2. Стянуть проект UI https://github.com/Rpry/OTUS_UI_keycloak
-3. Найти application.yml, поменять ui_keycloak:build:context в соответствии с тем, где лежит стянутый вами проект UI из первого пункта
-4. Запустить application-start.bat так чтобы он поднял все без ошибок
+2. Убедиться что есть БД keycloak, если нет - создать (create database keycloak)
+3. Стянуть проект UI https://github.com/Rpry/OTUS_UI_keycloak 
+4. Найти application.yml, поменять ui_keycloak:build:context в соответствии с тем, где лежит стянутый вами проект UI из первого пункта
+5. Запустить application-start.bat так чтобы он поднял все без ошибок
   
 Если во время выполнения пункта 4 будет ошибка UI_keycloak, значит возможно некорректно сделано действие 3
 
