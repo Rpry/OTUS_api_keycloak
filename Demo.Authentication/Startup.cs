@@ -1,6 +1,5 @@
 using Demo.Authentication.Authorization;
 using Demo.Authentication.Middleware;
-using Keycloak.AuthServices.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -20,7 +19,7 @@ namespace Demo.Authentication
         {
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
-            services.AddKeycloakWebApiAuthentication(Configuration);
+            services.AddKeycloakAuthentication(Configuration);
             services.AddTransient<IAuthorizationHandler, AgeAuthorizationHandler>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             
@@ -68,9 +67,10 @@ namespace Demo.Authentication
             app.UseRouting();
 
             // Добавляем аутентификацию и авторизацию в обработку запросов
+            
             app.UseAuthentication(); //Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler
-            app.UseAuthorization();
             app.UseCustomMiddleware();
+            app.UseAuthorization();
             
             app.UseEndpoints(endpoints =>
             {

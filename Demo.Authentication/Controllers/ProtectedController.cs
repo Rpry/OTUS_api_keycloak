@@ -19,7 +19,9 @@ namespace Demo.Authentication.Controllers
             return new JsonResult("Успех!");
         }
         
-        [Authorize]
+        //[Authorize()]
+        [Authorize(Roles = "Buyer")]
+        //[Authorize(Roles = "view-profile")]
         //[Authorize(AuthenticationSchemes = "MyCustomScheme")]
         //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         //[Authorize(Policies.RequireAge18Plus)]

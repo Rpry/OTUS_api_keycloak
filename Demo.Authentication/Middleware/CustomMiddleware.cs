@@ -19,6 +19,7 @@ namespace Demo.Authentication.Middleware
         public async Task InvokeAsync(HttpContext context)
         {
             var user = context.User;
+            var r = user.IsInRole("Seller");
             var isAuthenticated = user.Identity.IsAuthenticated;
             var userClaims = user.Claims;
             await _next(context);

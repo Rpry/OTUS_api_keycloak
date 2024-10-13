@@ -5,7 +5,7 @@
   #  hostname: postgres
   #  restart: always
   #  environment:
-  #    POSTGRES_DB: postgres
+  #    POSTGRES_DB: keycloak
   #    POSTGRES_USER: postgres
   #    POSTGRES_PASSWORD: password
   #  volumes:
@@ -19,7 +19,7 @@
     command: start-dev
     environment:
       KC_DB: postgres
-      KC_DB_URL: jdbc:postgresql://postgres:5432/postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/keycloak
       KC_DB_USERNAME: postgres
       KC_DB_PASSWORD: password
       PROXY_ADDRESS_FORWARDING: true
