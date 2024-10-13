@@ -5,7 +5,7 @@
   - Убедиться, что у вас установлен postgres, если нет - раскоментитровать в application.yml блок постгреса и его волюм ниже
   - Убедиться что в postgres есть БД keycloak, если нет - создать (create database keycloak)
   - Стянуть проект UI https://github.com/Rpry/OTUS_UI_keycloak (в любое место) 
-2. Найти application.yml в этом приложении (OTUS_API_KEYCLOAK), поменять ui_keycloak:build:context в соответствии с тем, где лежит стянутый вами проект UI из первого пункта
+2. Стянуть это приложение (OTUS_API_KEYCLOAK), найти application.yml, поменять ui_keycloak:build:context в соответствии с тем, где лежит стянутый вами проект UI из первого пункта
 3. Запустить application-start.bat так чтобы он поднял все без ошибок
   
 - Если во время выполнения пункта 3 будет ошибка UI_keycloak в консоли, значит возможно некорректно сделано действие 2
