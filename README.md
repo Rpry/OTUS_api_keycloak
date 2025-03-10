@@ -25,7 +25,7 @@ frame-src http:; frame-ancestors http://localhost:3001; object-src http:;
 ![image](https://github.com/Rpry/OTUS_api_keycloak/assets/13750284/e2dc362b-0311-4797-ab5b-e8dc935d5fbd)
 Обратите внимание на знак "плюс" в поле Web Origins. Опции Authentication flow оставить по умолчанию.
 7. Создать в Realm OTUS нового юзера, указать пароль во вкладке Credentials. Запомнить логин/пароль для входа в приложение. В дальнейшем при первом логине keycloak может попросить дополнить данные или сменить пароль.
-8. Проходим Client Scopes, открыть roles, там Mappers, далее realm roles и там переименовать token claim name из в realm_access.roles в role
+8. Проходим Client Scopes, открыть roles, там Mappers, далее realm roles и там переименовать token claim name из в realm_access.roles в role (в единственном числе)
 9. Проверка:
    - Зайти на http://localhost:3001 => должна открыться страничка без ошибок
    - Залогиниться кредами нового юзера => логин должен пройти без ошибок
